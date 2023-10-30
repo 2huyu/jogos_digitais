@@ -6,9 +6,9 @@ from os import listdir
 from os.path import isfile, join
 pygame.init()
 
-pygame.display.set_caption("Platformer")
+pygame.display.set_caption("Surviver Disaster")
 
-WIDTH, HEIGHT = 1000, 800
+WIDTH, HEIGHT = 800, 600
 FPS = 60
 PLAYER_VEL = 5
 
@@ -267,6 +267,10 @@ def handle_move(player, objects):
     if keys[pygame.K_LEFT] and not collide_left:
         player.move_left(PLAYER_VEL)
     if keys[pygame.K_RIGHT] and not collide_right:
+        player.move_right(PLAYER_VEL)
+    if keys[pygame.K_a] and not collide_left:
+        player.move_left(PLAYER_VEL)
+    if keys[pygame.K_d] and not collide_right:
         player.move_right(PLAYER_VEL)
 
     vertical_collide = handle_vertical_collision(player, objects, player.y_vel)
