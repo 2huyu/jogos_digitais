@@ -1,1 +1,1 @@
-# Disaster Surviver
+# Disaster Survivor
